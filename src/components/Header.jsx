@@ -1,4 +1,3 @@
-import { Download } from "lucide-react";
 import { NodeMark } from "./icons/NodeMark.jsx";
 
 const NAV = [
@@ -24,15 +23,6 @@ export function Header() {
             </a>
           ))}
         </nav>
-
-        <a
-          href="/Mohit-Kirtane-Resume.pdf"
-          download
-          className="flex items-center gap-2 rounded-md border border-line px-3.5 py-2 font-display text-[12px] font-medium tracking-wide text-text transition hover:border-copper-deep hover:text-copper"
-        >
-          <Download className="h-3.5 w-3.5" />
-          <span className="hidden sm:inline">RESUME</span>
-        </a>
       </div>
     </header>
   );

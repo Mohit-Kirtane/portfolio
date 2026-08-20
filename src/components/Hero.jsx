@@ -1,5 +1,5 @@
-import { ArrowRight, Download } from "lucide-react";
-import { TraceDiagram } from "./TraceDiagram.jsx";
+import { ArrowRight } from "lucide-react";
+import { HeroPortrait } from "./HeroPortrait.jsx";
 import { GithubMark } from "./icons/GithubMark.jsx";
 import { LinkedInMark } from "./icons/LinkedInMark.jsx";
 
@@ -36,14 +36,6 @@ export function Hero() {
             <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
           </a>
           <a
-            href="/Mohit-Kirtane-Resume.pdf"
-            download
-            className="flex items-center gap-2 rounded-md border border-line px-5 py-3 font-display text-[13px] font-medium tracking-wide text-text transition hover:border-copper-deep hover:text-copper"
-          >
-            <Download className="h-3.5 w-3.5" />
-            RESUME
-          </a>
-          <a
             href="https://github.com/mohit-kirtane"
             target="_blank"
             rel="noreferrer"
@@ -65,7 +57,7 @@ export function Hero() {
       </div>
 
       <div className="flex justify-center lg:justify-end">
-        <TraceDiagram />
+        <HeroPortrait />
       </div>
     </section>
   );

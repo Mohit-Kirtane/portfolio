@@ -21,10 +21,9 @@ GitHub Pages, Cloudflare Pages).
 ## Structure
 
 - `src/components/` — page sections (`Hero`, `Projects`, `Experience`, `Skills`,
-  `Education`, `Footer`) plus a shared `Header` and the signature `TraceDiagram`
-  hero visual.
-- `public/Mohit-Kirtane-Resume.pdf` — served at `/Mohit-Kirtane-Resume.pdf` for the
-  résumé download links.
+  `Education`, `Footer`) plus a shared `Header`, the `HeroPortrait` photo frame,
+  and the `TraceDiagram` signature visual (shown alongside the Dossier project).
+- `public/mohit-kirtane.jpg` — profile photo used in the hero.
 
 ## License
 

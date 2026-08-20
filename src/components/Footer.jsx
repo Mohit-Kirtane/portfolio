@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { GithubMark } from "./icons/GithubMark.jsx";
 import { LinkedInMark } from "./icons/LinkedInMark.jsx";
 
@@ -44,14 +44,6 @@ export function Footer() {
             <GithubMark className="h-3.5 w-3.5" />
             GITHUB
             <ArrowUpRight className="h-3 w-3" />
-          </a>
-          <a
-            href="/Mohit-Kirtane-Resume.pdf"
-            download
-            className="flex items-center gap-2 rounded-md border border-line px-5 py-3 font-display text-[13px] font-medium tracking-wide text-text transition hover:border-copper-deep hover:text-copper"
-          >
-            <Download className="h-3.5 w-3.5" />
-            RESUME
           </a>
         </div>
       </div>
