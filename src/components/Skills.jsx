@@ -1,15 +1,35 @@
 const GROUPS = [
   {
     label: "Agentic AI & LLMs",
-    items: ["LLMs", "RAG", "LangChain", "LangGraph", "Prompt Engineering", "AI Agents", "MCP", "Function Calling"],
+    items: [
+      "LLMs",
+      "RAG",
+      "LangChain",
+      "LangGraph",
+      "Gemini API",
+      "Prompt Engineering",
+      "AI Agents",
+      "MCP",
+      "Function Calling",
+    ],
   },
   {
     label: "Machine Learning",
-    items: ["Transformers", "PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "NLP", "OpenCV"],
+    items: [
+      "Transformers",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Hugging Face",
+      "Sentence Transformers",
+      "NLP",
+      "OpenCV",
+      "YOLO",
+    ],
   },
   {
     label: "Data & Retrieval",
-    items: ["MongoDB", "PostgreSQL", "MySQL", "FAISS", "ChromaDB"],
+    items: ["MongoDB", "PostgreSQL", "pgvector", "MySQL", "FAISS", "ChromaDB"],
   },
   {
     label: "Backend & APIs",
