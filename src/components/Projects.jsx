@@ -4,6 +4,17 @@ import { GithubMark } from "./icons/GithubMark.jsx";
 
 const SECONDARY_PROJECTS = [
   {
+    title: "Tracewell — Agent Observability & Eval",
+    live: true,
+    description:
+      "A tracing and evaluation tool for LangChain/LangGraph agents: an SDK captures every LLM, tool, and retriever call as a span, a dashboard renders the run as a proportional waterfall, and a background judge scores completed runs against custom rubrics automatically. Instruments Dossier's own document-intelligence workflow in production.",
+    tech: ["FastAPI", "MongoDB", "LangChain", "React", "Gemini"],
+    links: {
+      live: "https://tracewell.onrender.com",
+      code: "https://github.com/Mohit-Kirtane/tracewell",
+    },
+  },
+  {
     title: "Multimodal Video Intelligence Platform",
     description:
       "A video intelligence platform spanning recorded footage and live streams: object detection, tracking, and a fine-tuned ArcFace model for identity-based search, combined with LLM-powered natural-language queries over video content.",
@@ -20,11 +31,19 @@ const SECONDARY_PROJECTS = [
 function SecondaryCard({ project }) {
   return (
     <div className="flex h-full flex-col rounded-lg border border-line bg-surface p-6">
-      {project.context && (
-        <p className="font-display text-[10px] font-medium tracking-[0.14em] text-text-dim">
-          {project.context.toUpperCase()}
-        </p>
-      )}
+      <div className="flex flex-wrap items-start justify-between gap-2">
+        {project.context && (
+          <p className="font-display text-[10px] font-medium tracking-[0.14em] text-text-dim">
+            {project.context.toUpperCase()}
+          </p>
+        )}
+        {project.live && (
+          <span className="flex items-center gap-1.5 rounded-full border border-copper-deep/40 bg-copper/10 px-2 py-0.5 font-display text-[9px] font-medium tracking-wide text-copper">
+            <span className="node-pulse h-1.5 w-1.5 rounded-full bg-copper" />
+            LIVE
+          </span>
+        )}
+      </div>
       <h3 className="mt-3 font-display text-base font-semibold text-text">{project.title}</h3>
       <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-text-dim">
         {project.description}
@@ -39,6 +58,28 @@ function SecondaryCard({ project }) {
           </span>
         ))}
       </div>
+      {project.links && (
+        <div className="mt-5 flex flex-wrap gap-3">
+          <a
+            href={project.links.live}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 rounded-md bg-copper px-3 py-1.5 font-display text-[11px] font-medium tracking-wide text-bg transition hover:bg-copper-deep"
+          >
+            OPEN LIVE
+            <ArrowUpRight className="h-3 w-3" />
+          </a>
+          <a
+            href={project.links.code}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 rounded-md border border-line px-3 py-1.5 font-display text-[11px] font-medium tracking-wide text-text transition hover:border-copper-deep hover:text-copper"
+          >
+            <GithubMark className="h-3 w-3" />
+            VIEW CODE
+          </a>
+        </div>
+      )}
     </div>
   );
 }
@@ -115,7 +156,7 @@ export function Projects() {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+      <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {SECONDARY_PROJECTS.map((project) => (
           <SecondaryCard key={project.title} project={project} />
         ))}
