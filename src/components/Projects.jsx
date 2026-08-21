@@ -15,10 +15,15 @@ const SECONDARY_PROJECTS = [
     },
   },
   {
-    title: "Multimodal Video Intelligence Platform",
+    title: "Sentinel — Video Intelligence for Security Footage",
+    live: true,
     description:
-      "A video intelligence platform spanning recorded footage and live streams: object detection, tracking, and a fine-tuned ArcFace model for identity-based search, combined with LLM-powered natural-language queries over video content.",
-    tech: ["PyTorch", "OpenCV", "ArcFace", "gRPC", "FFmpeg", "LangChain"],
+      "Ask natural-language questions about security footage and get answers grounded in what's actually in the video. YOLOv8n detects every person/object region, NVIDIA's DAM-3B-Video describes each in detail, and a LangGraph RAG pipeline retrieves matching scenes via pgvector and answers with timestamp citations. The GPU step runs once, offline — the live app is 100% CPU.",
+    tech: ["FastAPI", "PostgreSQL", "LangGraph", "YOLOv8n", "DAM", "Gemini"],
+    links: {
+      live: "https://sentinel-99ch.onrender.com",
+      code: "https://github.com/Mohit-Kirtane/sentinel",
+    },
   },
   {
     title: "AI Data Annotation & Labeling Platform",
